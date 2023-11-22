@@ -101,6 +101,39 @@ function App() {
     }
   };
 
+
+const App = () => {
+
+  const fetchDataFromBackend = async () => {
+    try {
+      const response = await fetch('http://your-backend-api/data');
+      const data = await response.json();
+
+      console.log(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  const sendDataToBackend = async () => {
+    try {
+      const response = await fetch('http://your-backend-api/data', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ key: 'value' }),
+      });
+
+      console.log(response);
+    } catch (error) {
+      console.error('Error sending data:', error);
+    }
+  };
+
+};
+
+
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
