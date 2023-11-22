@@ -68,24 +68,11 @@ function App() {
   const storageKey = 'userData';
 
   const [isLeaderBoardOpen, setIsLeaderBoardOpen] = useState(false);
-  const [count, setCount] = useState(() => {
-    const retrievedCount = getData(storageKey);
-    return retrievedCount !== null ? retrievedCount : 0;
-  });
+  
 
   const leaderBoardRef = useRef(null);
   const [connectedWallet, setConnectedWallet] = useState(null);
-  useEffect(() => {
-    const retrievedCount = getData(storageKey);
-    if (retrievedCount !== null) {
-      setCount(retrievedCount);
-    }
-  }, []);
-
-  useEffect(() => {
-    storeData(storageKey, count);
-  }, [count]);
-
+ 
   const toggleLeaderBoard = () => {
     setIsLeaderBoardOpen(!isLeaderBoardOpen);
   };
