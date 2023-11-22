@@ -106,7 +106,7 @@ const App = () => {
 
   const fetchDataFromBackend = async () => {
     try {
-      const response = await fetch('http://your-backend-api/data');
+      const response = await fetch('http://localhost:3002/');
       const data = await response.json();
 
       console.log(data);
@@ -117,7 +117,7 @@ const App = () => {
 
   const sendDataToBackend = async () => {
     try {
-      const response = await fetch('http://your-backend-api/data', {
+      const response = await fetch('http://localhost:3002/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
