@@ -14,7 +14,7 @@ const LeaderBoard = ({ toggleLeaderBoard,num }) => {
         </div>
       </div>
       <div className="flex flex-col gap-4 pt-5 h-[calc(100vh-5rem)] overflow-y-auto scrollbar-hide">
-        <LeaderBoardCard num={num} address={"0x462Ba8a537DCcb8A5eD3e0850752A101ed4B478d"}/>
+        <LeaderBoardCard num={num} address={address}/>
       </div>
     </div>
   );
