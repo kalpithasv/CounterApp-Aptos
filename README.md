@@ -1,2 +1,2 @@
 # CounterApp-Aptos
-Apstos move
+Apstos move language rust cargo
